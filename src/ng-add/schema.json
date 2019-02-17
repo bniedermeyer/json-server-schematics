@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "json-server-schematic-ng-add",
+  "title": "json-server ng-add schematic",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "path": {
+      "type": "string",
+      "default": "./json-server",
+      "description": "The location you want your json-server files created",
+      "x-prompt": "Where would you like json-server setup?"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

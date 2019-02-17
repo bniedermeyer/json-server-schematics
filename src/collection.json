@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Adds json-server to your project with the requested configurations",
+      "factory": "./ng-add/index",
+      "schema": "./ng-add/schema.json"
+    },
+    "ng-add-setup": {
+      "description": "Performs additional setup actions for configuring the project.",
+      "private": true,
+      "factory": "./ng-add/setup",
+      "schema": "./ng-add/schema.json"
+    }
+  }
+}

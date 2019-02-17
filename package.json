@@ -1,0 +1,29 @@
+{
+  "name": "json-server-schematics",
+  "version": "1.0.0",
+  "description": "Angular schematics for adding json-server to an Angular workspace",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run sandbox:ng-add && npm run test:sandbox",
+    "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
+    "link:schematic": "npm link && cd sandbox && npm link add-json-server",
+    "sandbox:ng-add": "cd sandbox && ng g add-json-server:ng-add",
+    "test:sandbox": "cd sandbox && npm run lint && npm run build"
+  },
+  "keywords": [
+    "schematics",
+    "json-server"
+  ],
+  "author": "Brenden Niedermeyer<brenden.niedermeyer@gmail.com>",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^7.3.1",
+    "@angular-devkit/schematics": "^7.3.1",
+    "@types/jasmine": "^3.0.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^3.0.0",
+    "schematics-utilities": "^1.1.1",
+    "typescript": "~3.2.2"
+  }
+}
