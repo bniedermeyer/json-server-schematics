@@ -2,6 +2,12 @@
   "name": "json-server-schematics",
   "version": "1.0.0",
   "description": "Angular schematics for adding json-server to an Angular workspace",
+  "homepage": "https://github.com/bniedermeyer/json-server-schematics#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bniedermeyer/json-server-schematics"
+  },
+  "bugs": "https://github.com/bniedermeyer/json-server-schematics/issues",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "commit": "git-cz",
