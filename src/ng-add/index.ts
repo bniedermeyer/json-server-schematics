@@ -38,7 +38,6 @@ function addDependencies(): Rule {
 function performAdditionalSetup(options: Schema): Rule {
   return (tree: Tree, context: SchematicContext) => {
     const installTask = context.addTask(new NodePackageInstallTask());
-    context.logger.log('info', '✅ Dependencies Installed');
     context.addTask(new RunSchematicTask('ng-add-setup', options), [
       installTask
     ]);
