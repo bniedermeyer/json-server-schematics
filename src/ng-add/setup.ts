@@ -98,7 +98,7 @@ function addPackageJsonScript(options: Schema): Rule {
     );
     const serveScript = `npm run json-server & ng serve ${
       options.project
-    } --proxyConfig ${proxyPath}`;
+    } --proxy-config ${proxyPath}`;
     try {
       const packageJsonFile = tree.read(`package.json`);
       if (packageJsonFile) {
