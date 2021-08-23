@@ -10,12 +10,13 @@
   "bugs": "https://github.com/bniedermeyer/json-server-schematics/issues",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "commit": "git-cz",
+    "test:unit": "npm run build && jasmine src/**/*_spec.js",
+    "setup": "husky install && npm run link:schematic",
     "test": "npm run sandbox:ng-add && npm run test:sandbox",
     "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
-    "link:schematic": "npm link && cd sandbox && npm link add-json-server",
-    "sandbox:ng-add": "cd sandbox && ng g add-json-server:ng-add",
-    "test:sandbox": "cd sandbox && npm run lint && npm run build"
+    "link:schematic": "npm link && cd sandbox && npm link json-server-schematics",
+    "sandbox:ng-add": "npm run build && npm run link:schematic && cd sandbox && ng g json-server-schematics:ng-add",
+    "test:sandbox": "cd sandbox && npm run build"
   },
   "keywords": [
     "schematics",
@@ -28,28 +29,23 @@
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^7.3.1",
-    "@angular-devkit/schematics": "^7.3.1",
-    "@types/jasmine": "^3.0.0",
-    "@types/node": "^8.0.31",
-    "jasmine": "^3.0.0",
-    "schematics-utilities": "^1.1.1",
-    "typescript": "~3.2.2"
+    "@angular-devkit/core": "^12.2.2",
+    "@angular-devkit/schematics": "^12.2.2",
+    "schematics-utilities": "^1.1.3",
+    "typescript": "~4.3.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "cz-conventional-changelog": "^2.1.0",
-    "husky": "^1.3.1"
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/jasmine": "~3.8.0",
+    "@types/node": "^12.11.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.0",
+    "jasmine": "^3.5.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

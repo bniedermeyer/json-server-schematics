@@ -20,7 +20,7 @@ import {
 import path = require('path');
 
 export default function(options: Schema): Rule {
-  return (tree: Tree, context: SchematicContext) => {
+  return () => {
     return chain([
       setupProxy(options),
       setupJsonServer(options),
