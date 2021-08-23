@@ -25,7 +25,7 @@
   "files": [
     "src"
   ],
-  "author": "Brenden Niedermeyer<brenden.niedermeyer@gmail.com>",
+  "author": "Brenden Niedermeyer<contact@brenden.dev>",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
@@ -37,11 +37,14 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.0",
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "semantic-release": "^17.4.5"
   },
   "config": {
     "commitizen": {
