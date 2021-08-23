@@ -20,7 +20,7 @@ const DEPS: NodeDependency[] = [
 ];
 
 export default function(options: Schema): Rule {
-  return (tree: Tree, context: SchematicContext) => {
+  return () => {
     return chain([addDependencies(), performAdditionalSetup(options)]);
   };
 }
