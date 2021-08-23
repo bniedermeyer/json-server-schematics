@@ -1,6 +1,6 @@
 {
   "name": "json-server-schematics",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Angular schematics for adding json-server to an Angular workspace",
   "homepage": "https://github.com/bniedermeyer/json-server-schematics#readme",
   "repository": {
